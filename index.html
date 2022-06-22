@@ -10,22 +10,16 @@
 </head>
 <body>
 <div class="container">
-    <div class="row align-items-center">
-        <h2>Определение количества русских букв в строке</h2>
-        <div class="input-group">
-            <span class="input-group-text">Введите текст</span>
+    <h2>Определение количества русских букв в строке</h2>
+    <div class="row1">
+        <span>Введите текст:</span>
             <textarea id="text" class="form-control"></textarea>
-            <button class="btn btn-outline-danger btn-styled" >
-                <img height="30" width="30" src="./deleteBtn.svg" alt="icon delete button">
-            </button>
-        </div>
-        <button id="resButton" type="button" class="btn btn-primary">Получить результат</button>
     </div>
-
+    <button id="resButton" type="button" class="btn btn-primary">Получить результат</button>
     <div class="row align-items-center">
         <p>
             <span>В ведённом тексте тексте</span>
-            <span id="resLetters">10</span>
+            <span id="resLetters">0</span>
             <span>букв, из которых</span>
         </p>
     </div>
@@ -43,7 +37,9 @@
             <p id="resNot"> </p>
         </div>
     </div>
-
+    <button class="btn btn-outline-danger btn-styled" >
+        <img height="30" width="30" src="./deleteBtn.svg" alt="icon delete button">
+    </button>
     <div class="errorScreen hidden">
         <div class="errorBlock">
             <p class="">Упс! Ошибка!</p>

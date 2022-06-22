@@ -51,7 +51,7 @@ btnDelContent.addEventListener("click" , () => {
 	resVowels.innerText = '';
 	resConsonants.innerText = '';
 	resNot.innerText = '';
-	resLetters.innerText = '';
+	resLetters.innerText = '0';
 })
 
 btnClose.addEventListener("click", () => {

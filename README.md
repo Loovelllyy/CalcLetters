@@ -2,4 +2,4 @@
 
 Let's count the vowels and consonants!
 
-demo: culculate-letters.netlify.app
+demo: https://culculate-letters.netlify.app

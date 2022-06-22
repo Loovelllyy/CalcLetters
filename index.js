@@ -13,9 +13,8 @@ const ruConsonantsStr = "БВГДЖЗЙКЛМНПРСТФХЦЧШЩ";
 
 const parse = (text) => {
 	const ruL = new RegExp("^[а-яё]", "ig")
-	const enL = new RegExp("^[a-z]", "ig")
 	if (text.value === '') throw new Error("Похоже, что была введена пустая строка :с \nПопробуйте ещё раз");
-	if (!Boolean(text.value.match(ruL)) || Boolean(text.value.match(enL))) throw new Error("Наши алгоритмы пришлы к выводу, что здесь есть символы, отличные от русских букв \nНе расстраивайтесь, вы всегда можете попробовать снова! :)")
+	if (!Boolean(text.value.match(ruL))) throw new Error("Наши алгоритмы пришлы к выводу, что здесь есть символы, отличные от русских букв \nНе расстраивайтесь, вы всегда можете попробовать снова! :)")
 	return text.value.replace(/\s/ig, '');
 }
 
@@ -26,8 +25,11 @@ const getResult = (text) => {
 	let vowels = 0;
 	let consonants = 0;
 	let letter = 0;
+	const enL = new RegExp("^[a-z]", "ig")
+
 
 	arrayLetters.forEach(el => {
+		if (el.match(enL)) throw new Error("Наши алгоритмы пришлы к выводу, что здесь есть символы, отличные от русских букв \nНе расстраивайтесь, вы всегда можете попробовать снова! :)");
 		const isVowel = ruVowelsStr.match(getExp(el));
 		if (isVowel) vowels += 1;
 		else if (el === 'ь' || el === 'Ь' || el === 'ъ' || el === 'Ъ') letter += 1;
